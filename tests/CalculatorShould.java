@@ -1,4 +1,4 @@
-import application.Calculator;
+import application.model.Calculator;
 import org.junit.Before;
 import org.junit.Test;
 

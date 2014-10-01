@@ -26,19 +26,18 @@ public class LaunchApp extends Application {
     public void showCalculator() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(LaunchApp.class.getResource("application.fxml"));
+            loader.setLocation(LaunchApp.class.getResource("scenes/calculator.fxml"));
             AnchorPane calculator = (AnchorPane) loader.load();
             rootLayout.setCenter(calculator);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(LaunchApp.class.getResource("RootLayout.fxml"));
+            loader.setLocation(LaunchApp.class.getResource("scenes/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
