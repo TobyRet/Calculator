@@ -11,7 +11,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalculatorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalculatorController">
    <children>
       <SplitPane dividerPositions="0.2814070351758794" orientation="VERTICAL" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -30,7 +30,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <GridPane style="-fx-grid-lines-visible: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -38,94 +38,94 @@
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="sevenAction" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sevenButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="7" GridPane.rowIndex="1">
+                        <Button fx:id="sevenAction" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sevenButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="7" GridPane.rowIndex="1">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="eightAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#eightButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button fx:id="eightAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eightButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="nineAction" contentDisplay="CENTER" layoutX="84.0" layoutY="66.0" mnemonicParsing="false" onAction="#nineButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Button fx:id="nineAction" contentDisplay="CENTER" layoutX="84.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#nineButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="fourAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#fourButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="4" GridPane.rowIndex="2">
+                        <Button fx:id="fourAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fourButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="4" GridPane.rowIndex="2">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="fiveAction" contentDisplay="CENTER" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" onAction="#fiveButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Button fx:id="fiveAction" contentDisplay="CENTER" layoutX="10.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fiveButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="sixAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#sixButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <Button fx:id="sixAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sixButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="oneAction" contentDisplay="CENTER" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" onAction="#oneButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="1" GridPane.rowIndex="3">
+                        <Button fx:id="oneAction" contentDisplay="CENTER" layoutX="10.0" layoutY="123.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oneButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="1" GridPane.rowIndex="3">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="twoAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#twoButtonClicked" prefHeight="72.0" prefWidth="74.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Button fx:id="twoAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#twoButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="threeAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#threeButtonClicked" prefHeight="52.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <Button fx:id="threeAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#threeButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="zeroAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#zeroButtonClicked" prefHeight="51.0" prefWidth="74.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Button fx:id="zeroAction" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#zeroButtonClicked" prefHeight="58.0" prefWidth="74.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="clearAction" contentDisplay="CENTER" layoutX="158.0" layoutY="179.0" mnemonicParsing="false" onAction="#clearButtonClicked" prefHeight="61.0" prefWidth="74.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #bdc3c7;" text="AC" textFill="WHITE">
+                        <Button fx:id="clearAction" contentDisplay="CENTER" layoutX="158.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearButtonClicked" prefHeight="58.0" prefWidth="74.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #bdc3c7;" text="AC" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </Button>
-                        <Button fx:id="addAction" contentDisplay="CENTER" layoutX="158.0" layoutY="179.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="70.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <Button fx:id="addAction" contentDisplay="CENTER" layoutX="158.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="equalsAction" contentDisplay="CENTER" layoutX="233.0" layoutY="179.0" mnemonicParsing="false" onAction="#equalsButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                        <Button fx:id="equalsAction" contentDisplay="CENTER" layoutX="233.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#equalsButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="oneAction1" contentDisplay="CENTER" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#oneButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="." GridPane.rowIndex="4">
+                        <Button fx:id="oneAction1" contentDisplay="CENTER" layoutX="10.0" layoutY="178.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oneButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="." GridPane.rowIndex="4">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="sevenAction1" contentDisplay="CENTER" layoutX="10.0" layoutY="65.0" mnemonicParsing="false" onAction="#sevenButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="CRAP" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                        <Button fx:id="sevenAction1" contentDisplay="CENTER" layoutX="10.0" layoutY="65.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sevenButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: white;" text="CRAP" GridPane.columnIndex="2" GridPane.rowIndex="4">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="addAction1" contentDisplay="CENTER" layoutX="233.0" layoutY="178.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="62.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <Button fx:id="addAction1" contentDisplay="CENTER" layoutX="233.0" layoutY="178.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <font>
                               <Font size="31.0" />
                            </font>
                         </Button>
-                        <Button fx:id="addAction11" contentDisplay="CENTER" layoutX="233.0" layoutY="122.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="80.0" prefWidth="102.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button fx:id="addAction11" contentDisplay="CENTER" layoutX="233.0" layoutY="122.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: #ecf0f1; -fx-background-color: #e67e22;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <font>
                               <Font size="31.0" />
                            </font>
