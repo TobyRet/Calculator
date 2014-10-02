@@ -5,19 +5,19 @@ import java.util.List;
 public class Calculator {
     private Integer value = 0;
 
-    public Integer getValue() {
+    /*public Integer getValue() {
         return value;
-    }
+    }*/
 
-    public void setValue(Integer value) {
+    /*public void setValue(Integer value) {
         this.value = value;
-    }
+    }*/
 
-    public void add(List<Integer> numbersToAdd) {
+    public String add(List<String> numbersToAdd) {
         Integer value = 0;
-        for(Integer number : numbersToAdd) {
-            value += number;
+        for(String number : numbersToAdd) {
+            value += Integer.parseInt(number);
         }
-        setValue(value);
+        return value.toString();
     }
 }

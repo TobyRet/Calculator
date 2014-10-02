@@ -6,19 +6,26 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CalculatorController {
 
     private Calculator calculator ;
+    private LaunchApp launchApp;
+    private List<String> numbersToSum = new ArrayList<String>();
 
     @FXML
     private Text display;
 
-    @FXML
-    private void initialize(){
-
+    public CalculatorController() {
+        this.calculator = new Calculator();
     }
 
-    private LaunchApp launchApp;
+    @FXML
+    private void initialize(){
+    }
+
 
     @FXML
     public void oneButtonClicked(ActionEvent actionEvent) {
@@ -28,10 +35,6 @@ public class CalculatorController {
     @FXML
     public void twoButtonClicked(ActionEvent actionEvent) {
         display.setText(append("2"));
-    }
-
-    private String append(String value) {
-        return display.getText() + value;
     }
 
     @FXML
@@ -70,27 +73,33 @@ public class CalculatorController {
     }
 
     @FXML
-    public void zeroButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("0"));
-    }
-
-    @FXML
     public void addButtonClicked(ActionEvent actionEvent) {
-        display.setText("add some shit");
+        numbersToSum.add(display.getText());
+        display.setText("");
     }
 
     @FXML
     public void equalsButtonClicked(ActionEvent actionEvent) {
-        display.setText("equals some shit");
+        numbersToSum.add(display.getText());
+        display.setText(calculator.add(numbersToSum));
+        numbersToSum = new ArrayList<String>();
     }
 
-    public CalculatorController() {
-        this.calculator = new Calculator();
-    }
 
     public void setMainApp(LaunchApp launchApp) {
         this.launchApp = launchApp;
     }
 
+    private String append(String value) {
+        return display.getText() + value;
+    }
 
+    public void zeroButtonClicked(ActionEvent actionEvent) {
+        display.setText(append("0"));
+    }
+
+    public void clearButtonClicked(ActionEvent actionEvent) {
+        numbersToSum = new ArrayList<String>();
+        display.setText(append(""));
+    }
 }

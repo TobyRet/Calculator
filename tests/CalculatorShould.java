@@ -16,19 +16,18 @@ public class CalculatorShould {
         calculator = new Calculator();
     }
 
-    @Test public void
-    initialise_with_a_value_of_null() {
+    //@Test public void
+    /*initialise_with_a_value_of_null() {
         assertThat(calculator.getValue(), is(0));
-    }
+    }*/
 
     @Test public void
     add_numbers() {
-        List<Integer> numbersToAdd = new ArrayList();
-        numbersToAdd.add(1);
-        numbersToAdd.add(2);
-        numbersToAdd.add(3);
-        calculator.add(numbersToAdd);
-        assertThat(calculator.getValue(), is(6));
+        List<String> numbersToAdd = new ArrayList();
+        numbersToAdd.add("1");
+        numbersToAdd.add("2");
+        numbersToAdd.add("3");
+        assertThat(calculator.add(numbersToAdd),is("6"));
     }
 
 }
