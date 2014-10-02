@@ -1,5 +1,6 @@
 package application;
 
+import application.controller.CalculatorController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -28,7 +29,12 @@ public class LaunchApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(LaunchApp.class.getResource("scenes/calculator.fxml"));
             AnchorPane calculator = (AnchorPane) loader.load();
+
             rootLayout.setCenter(calculator);
+
+            CalculatorController calculatorController = loader.getController();
+            calculatorController.setMainApp(this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
