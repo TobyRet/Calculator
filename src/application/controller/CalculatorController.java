@@ -1,7 +1,9 @@
 package application.controller;
 
 import application.LaunchApp;
-import application.model.Calculator;
+import application.model.AddOperation;
+import application.model.Operation;
+import application.model.SubtractOperation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
@@ -11,13 +13,12 @@ import java.util.List;
 
 public class CalculatorController {
 
-    private Calculator calculator ;
+    private Operation operation;
     private LaunchApp launchApp;
     private List<String> numbersToOperateOn = new ArrayList<String>();
     @FXML private Text display;
 
     public CalculatorController() {
-        this.calculator = new Calculator();
     }
 
     @FXML
@@ -77,19 +78,21 @@ public class CalculatorController {
     @FXML
     public void addButtonClicked(ActionEvent actionEvent) {
         numbersToOperateOn.add(display.getText());
+        operation = new AddOperation();
         display.setText("");
     }
 
     @FXML
     public void subtractButtonClicked(ActionEvent actionEvent) {
         numbersToOperateOn.add(display.getText());
-        clearDisplay();
+        operation = new SubtractOperation();
+        display.setText("");
     }
 
     @FXML
     public void equalsButtonClicked(ActionEvent actionEvent) {
         numbersToOperateOn.add(display.getText());
-        display.setText(calculator.add(numbersToOperateOn));
+        display.setText(operation.execute(numbersToOperateOn));
         numbersToOperateOn.clear();
     }
 
@@ -100,7 +103,7 @@ public class CalculatorController {
     private String append(String value) {
         return display.getText() + value;
     }
-    
+
     public void clearButtonClicked(ActionEvent actionEvent) {
         numbersToOperateOn.clear();
         clearDisplay();
