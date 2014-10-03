@@ -13,10 +13,8 @@ public class CalculatorController {
 
     private Calculator calculator ;
     private LaunchApp launchApp;
-    private List<String> numbersToSum = new ArrayList<String>();
-
-    @FXML
-    private Text display;
+    private List<String> numbersToOperateOn = new ArrayList<String>();
+    @FXML private Text display;
 
     public CalculatorController() {
         this.calculator = new Calculator();
@@ -25,7 +23,6 @@ public class CalculatorController {
     @FXML
     private void initialize(){
     }
-
 
     @FXML
     public void oneButtonClicked(ActionEvent actionEvent) {
@@ -73,18 +70,28 @@ public class CalculatorController {
     }
 
     @FXML
+    public void zeroButtonClicked(ActionEvent actionEvent) {
+        display.setText(append("0"));
+    }
+
+    @FXML
     public void addButtonClicked(ActionEvent actionEvent) {
-        numbersToSum.add(display.getText());
+        numbersToOperateOn.add(display.getText());
         display.setText("");
     }
 
     @FXML
-    public void equalsButtonClicked(ActionEvent actionEvent) {
-        numbersToSum.add(display.getText());
-        display.setText(calculator.add(numbersToSum));
-        numbersToSum = new ArrayList<String>();
+    public void subtractButtonClicked(ActionEvent actionEvent) {
+        numbersToOperateOn.add(display.getText());
+        clearDisplay();
     }
 
+    @FXML
+    public void equalsButtonClicked(ActionEvent actionEvent) {
+        numbersToOperateOn.add(display.getText());
+        display.setText(calculator.add(numbersToOperateOn));
+        numbersToOperateOn.clear();
+    }
 
     public void setMainApp(LaunchApp launchApp) {
         this.launchApp = launchApp;
@@ -93,13 +100,13 @@ public class CalculatorController {
     private String append(String value) {
         return display.getText() + value;
     }
-
-    public void zeroButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("0"));
+    
+    public void clearButtonClicked(ActionEvent actionEvent) {
+        numbersToOperateOn.clear();
+        clearDisplay();
     }
 
-    public void clearButtonClicked(ActionEvent actionEvent) {
-        numbersToSum = new ArrayList<String>();
-        display.setText(append(""));
+    private void clearDisplay() {
+        display.setText(numbersToOperateOn.get(0));
     }
 }

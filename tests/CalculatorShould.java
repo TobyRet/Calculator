@@ -10,24 +10,28 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class CalculatorShould {
     private Calculator calculator;
+    List<String> numbersToPerformOperationOn;
 
     @Before
     public void initialise() {
         calculator = new Calculator();
+        numbersToPerformOperationOn = new ArrayList();
     }
-
-    //@Test public void
-    /*initialise_with_a_value_of_null() {
-        assertThat(calculator.getValue(), is(0));
-    }*/
 
     @Test public void
     add_numbers() {
-        List<String> numbersToAdd = new ArrayList();
-        numbersToAdd.add("1");
-        numbersToAdd.add("2");
-        numbersToAdd.add("3");
-        assertThat(calculator.add(numbersToAdd),is("6"));
+        numbersToPerformOperationOn.add("1");
+        numbersToPerformOperationOn.add("2");
+        numbersToPerformOperationOn.add("3");
+        assertThat(calculator.add(numbersToPerformOperationOn),is("6"));
+    }
+
+    @Test public void
+    subtract_numbers(){
+        numbersToPerformOperationOn.add("3");
+        numbersToPerformOperationOn.add("2");
+        assertThat(calculator.subtract(numbersToPerformOperationOn), is("1"));
+
     }
 
 }
