@@ -19,19 +19,17 @@ public class AddOperationShould {
     }
 
     @Test public void
-    add_numbers() {
+    add_integers() {
         numbersToPerformOperationOn.add("1");
         numbersToPerformOperationOn.add("2");
         numbersToPerformOperationOn.add("3");
         assertThat(addOperation.execute(numbersToPerformOperationOn),is("6"));
     }
 
-//    @Test public void
-//    subtract_numbers(){
-//        numbersToPerformOperationOn.add("3");
-//        numbersToPerformOperationOn.add("2");
-//        assertThat(calculator.subtract(numbersToPerformOperationOn), is("1"));
-//
-//    }
-
+    @Test public void
+    add_doubles() {
+        numbersToPerformOperationOn.add("1.3");
+        numbersToPerformOperationOn.add("2.3");
+        assertThat(addOperation.execute(numbersToPerformOperationOn),is("3.6"));
+    }
 }

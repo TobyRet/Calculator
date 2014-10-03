@@ -1,9 +1,7 @@
 package application.controller;
 
 import application.LaunchApp;
-import application.model.AddOperation;
-import application.model.Operation;
-import application.model.SubtractOperation;
+import application.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
@@ -27,7 +25,9 @@ public class CalculatorController {
 
     @FXML
     public void oneButtonClicked(ActionEvent actionEvent) {
-        display.setText("1");
+        if(display.getText().length() < 9) {
+            display.setText("1");
+        }
     }
 
     @FXML
@@ -76,6 +76,18 @@ public class CalculatorController {
     }
 
     @FXML
+    public void decimalButtonClicked(ActionEvent actionEvent) {
+        if(!display.getText().contains(".")) {
+            display.setText(append("."));
+        }
+    }
+
+    @FXML
+    public void crapButtonClicked(ActionEvent actionEvent) {
+        display.setText(append("CRAP!"));
+    }
+
+    @FXML
     public void addButtonClicked(ActionEvent actionEvent) {
         numbersToOperateOn.add(display.getText());
         operation = new AddOperation();
@@ -90,10 +102,30 @@ public class CalculatorController {
     }
 
     @FXML
+    public void multiplyButtonClicked(ActionEvent actionEvent) {
+        numbersToOperateOn.add(display.getText());
+        operation = new MultiplyOperation();
+        display.setText("");
+    }
+
+    @FXML
+    public void divideButtonClicked(ActionEvent actionEvent) {
+        numbersToOperateOn.add(display.getText());
+        operation = new DivideOperation();
+        display.setText("");
+    }
+
+    @FXML
     public void equalsButtonClicked(ActionEvent actionEvent) {
         numbersToOperateOn.add(display.getText());
         display.setText(operation.execute(numbersToOperateOn));
         numbersToOperateOn.clear();
+    }
+
+    @FXML
+    public void clearButtonClicked(ActionEvent actionEvent) {
+        numbersToOperateOn.clear();
+        clearDisplay();
     }
 
     public void setMainApp(LaunchApp launchApp) {
@@ -104,12 +136,9 @@ public class CalculatorController {
         return display.getText() + value;
     }
 
-    public void clearButtonClicked(ActionEvent actionEvent) {
-        numbersToOperateOn.clear();
-        clearDisplay();
-    }
-
     private void clearDisplay() {
         display.setText("");
     }
+
+
 }
