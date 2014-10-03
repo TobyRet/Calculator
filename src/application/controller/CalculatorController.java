@@ -110,6 +110,6 @@ public class CalculatorController {
     }
 
     private void clearDisplay() {
-        display.setText(numbersToOperateOn.get(0));
+        display.setText("");
     }
 }
