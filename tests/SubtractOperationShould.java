@@ -20,9 +20,16 @@ public class SubtractOperationShould {
     }
 
     @Test public void
-    subtract_numbers(){
+    subtract_integers(){
         numbersToPerformOperationOn.add("3");
         numbersToPerformOperationOn.add("2");
         assertThat(subtractOperation.execute(numbersToPerformOperationOn), is("1"));
+    }
+
+    @Test public void
+    subtract_doubles() {
+        numbersToPerformOperationOn.add("3.2");
+        numbersToPerformOperationOn.add("2.1");
+        assertThat(subtractOperation.execute(numbersToPerformOperationOn), is("1.1"));
     }
 }
