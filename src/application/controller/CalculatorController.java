@@ -14,65 +14,84 @@ public class CalculatorController {
     private Operation operation;
     private LaunchApp launchApp;
     private List<String> numbersToOperateOn = new ArrayList<String>();
+
     @FXML private Text display;
 
     public CalculatorController() {
     }
 
     @FXML
-    private void initialize(){
+    private void initialize() {
     }
 
     @FXML
     public void oneButtonClicked(ActionEvent actionEvent) {
-        if(display.getText().length() < 9) {
-            display.setText("1");
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("1"));
         }
     }
 
     @FXML
     public void twoButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("2"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("2"));
+        }
     }
 
     @FXML
     public void threeButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("3"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("3"));
+        }
     }
 
     @FXML
     public void fourButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("4"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("4"));
+        }
     }
 
     @FXML
     public void fiveButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("5"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("5"));
+        }
     }
 
     @FXML
     public void sixButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("6"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("6"));
+        }
     }
 
     @FXML
     public void sevenButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("7"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("7"));
+        }
     }
 
     @FXML
     public void eightButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("8"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("8"));
+        }
     }
 
     @FXML
     public void nineButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("9"));
+        if (displayHasNotReachedMaxCharLimit()) {
+            display.setText(append("9"));
+        }
     }
 
     @FXML
     public void zeroButtonClicked(ActionEvent actionEvent) {
-        display.setText(append("0"));
+        if (displayHasNotReachedMaxCharLimit() && displayDoesNotStartWithZero()) {
+            display.setText(append("0"));
+        }
     }
 
     @FXML
@@ -96,9 +115,9 @@ public class CalculatorController {
 
     @FXML
     public void subtractButtonClicked(ActionEvent actionEvent) {
-//        numbersToOperateOn.add(display.getText());
-//        operation = new SubtractOperation();
-//        display.setText("");
+        numbersToOperateOn.add(display.getText());
+        operation = new SubtractOperation();
+        display.setText("");
     }
 
     @FXML
@@ -140,5 +159,12 @@ public class CalculatorController {
         display.setText("");
     }
 
+    private boolean displayHasNotReachedMaxCharLimit() {
+        return display.getText().length() < 9;
+    }
+
+    private boolean displayDoesNotStartWithZero() {
+        return !display.getText().startsWith("0");
+    }
 
 }
