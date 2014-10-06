@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-class ConvertStringToBigDecimal {
+public class ConvertStringToBigDecimal {
 
     public static List<BigDecimal> convert(List<String> numbersToOperateOn) {
         List<BigDecimal> bigDecimalList = new ArrayList<>();
