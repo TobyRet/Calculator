@@ -19,9 +19,16 @@ public class MultiplyOperationShould {
 
     @Test
     public void
-    add_numbers() {
+    multiply_integers() {
         numbersToPerformOperationOn.add("2");
         numbersToPerformOperationOn.add("3");
         assertThat(multiplyOperation.execute(numbersToPerformOperationOn),is("6"));
+    }
+
+    @Test public void
+    multiply_doubles() {
+        numbersToPerformOperationOn.add("2.4");
+        numbersToPerformOperationOn.add("3.2");
+        assertThat(multiplyOperation.execute(numbersToPerformOperationOn),is("7.68"));
     }
 }
