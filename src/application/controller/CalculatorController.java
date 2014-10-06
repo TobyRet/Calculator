@@ -96,9 +96,9 @@ public class CalculatorController {
 
     @FXML
     public void subtractButtonClicked(ActionEvent actionEvent) {
-        numbersToOperateOn.add(display.getText());
-        operation = new SubtractOperation();
-        display.setText("");
+//        numbersToOperateOn.add(display.getText());
+//        operation = new SubtractOperation();
+//        display.setText("");
     }
 
     @FXML

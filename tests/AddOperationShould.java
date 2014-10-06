@@ -20,16 +20,24 @@ public class AddOperationShould {
 
     @Test public void
     add_integers() {
-        numbersToPerformOperationOn.add("1");
-        numbersToPerformOperationOn.add("2");
-        numbersToPerformOperationOn.add("3");
+        createIntegerArray();
         assertThat(addOperation.execute(numbersToPerformOperationOn),is("6"));
     }
 
     @Test public void
     add_doubles() {
-        numbersToPerformOperationOn.add("1.3");
+        createDoubleArray();
+        assertThat(addOperation.execute(numbersToPerformOperationOn),is("3.66"));
+    }
+
+    private void createDoubleArray() {
+        numbersToPerformOperationOn.add("1.36");
         numbersToPerformOperationOn.add("2.3");
-        assertThat(addOperation.execute(numbersToPerformOperationOn),is("3.6"));
+    }
+
+    private void createIntegerArray() {
+        numbersToPerformOperationOn.add("1");
+        numbersToPerformOperationOn.add("2");
+        numbersToPerformOperationOn.add("3");
     }
 }
